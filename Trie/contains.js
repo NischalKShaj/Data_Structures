@@ -29,7 +29,7 @@ class SuffixTree {
     }
     if (node.start === null) {
       node.start = index;
-      node.end = this.text.length-1;
+      node.end = this.text.length - 1;
     }
   }
   containsSuffix(suffix) {
@@ -41,11 +41,11 @@ class SuffixTree {
       }
       node = node.children[char];
     }
-    return node.end!==null;
+    return node.end !== null;
   }
 }
-const text = "banana"
-const suffixTree = new SuffixTree(text)
+const text = "banana";
+const suffixTree = new SuffixTree(text);
 const suffix = "anana";
 console.log(suffixTree.containsSuffix(suffix));
 console.log(suffixTree);
