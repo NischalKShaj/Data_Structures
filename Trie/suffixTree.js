@@ -20,7 +20,7 @@ class SuffixTree {
   }
   insertSuffix(suffix, index) {
     let node = this.root;
-    for (let i = 0; i < suffix.length; i++) {
+    for (let i = index; i < suffix.length; i++) {
       const char = suffix[i];
       if (!node.children[char]) {
         node.children[char] = new Node();
@@ -29,7 +29,7 @@ class SuffixTree {
     }
     if (node.start === null) {
       node.start = index;
-      node.end = this.text.length - 1;
+      node.end = "*";
     }
   }
 }
