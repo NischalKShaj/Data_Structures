@@ -45,23 +45,23 @@ class Trie {
       }
     }
   }
-  display(){
-    const result = []
-    this.traverse(this.root, "", result)
-    return result.join("\n")
+  display() {
+    const result = [];
+    this.traverse(this.root, "", result);
+    return result.join("\n");
   }
-  traverse(node, currentWord, result){
-    if(node.end){
-        result.push(currentWord)
+  traverse(node, currentWord, result) {
+    if (node.end) {
+      result.push(currentWord);
     }
-    for(const [char, childnode] of node.children){
-        this.traverse(childnode, currentWord+char, result)
+    for (const [char, childnode] of node.children) {
+      this.traverse(childnode, currentWord + char, result);
     }
   }
 }
-const trie = new Trie()
-trie.insert("apple")
-trie.insert("mango")
+const trie = new Trie();
+trie.insert("apple");
+trie.insert("mango");
 console.log(trie.display());
-trie.delete("app")
+trie.delete("app");
 console.log(trie.display());
