@@ -20,19 +20,19 @@ class HashTable {
     const hash = this.hash(key);
     return this.table[hash];
   }
-  display(){
-    for(let i=0;i<this.table.length;i++){
-        if(this.table[i]){
-            console.log(i, this.table[i]);
-        }
+  display() {
+    for (let i = 0; i < this.table.length; i++) {
+      if (this.table[i]) {
+        console.log(i, this.table[i]);
+      }
     }
   }
 }
-const hash = new HashTable(10)
-hash.addValue("name", "Nischal")
-hash.addValue("age", 21)
-hash.addValue("height", 165)
-hash.addValue("wieght", 40)
+const hash = new HashTable(10);
+hash.addValue("name", "Nischal");
+hash.addValue("age", 21);
+hash.addValue("height", 165);
+hash.addValue("wieght", 40);
 
-console.log(hash.getValue("name"))
+console.log(hash.getValue("name"));
 hash.display();

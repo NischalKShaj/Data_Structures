@@ -84,4 +84,3 @@ console.log("testing collision");
 hashTable.insert("name", "Vishnu");
 hashTable.display();
 console.log(hashTable.get("name"));
-
