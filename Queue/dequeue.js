@@ -32,7 +32,7 @@ class Queue {
     this.front = this.front.next;
     this.length--;
     if (this.front === null) {
-      this.rear = mull;
+      this.rear = null;
     }
   }
   display() {
